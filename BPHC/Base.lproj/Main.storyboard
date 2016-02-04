@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--Profile-->
+        <!--Newsfeed-->
         <scene sceneID="c7D-54-gAo">
             <objects>
-                <viewController id="WhH-a0-T3d" userLabel="Profile" sceneMemberID="viewController">
+                <viewController id="WhH-a0-T3d" userLabel="Newsfeed" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="u8s-uT-66Y"/>
                         <viewControllerLayoutGuide type="bottom" id="V9y-NA-rLF"/>
@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="50" y="-1337"/>
         </scene>
-        <!--Forum-->
+        <!--Profile-->
         <scene sceneID="Rgl-Rf-lcJ">
             <objects>
-                <viewController id="KPi-p9-aTf" userLabel="Forum" sceneMemberID="viewController">
+                <viewController id="KPi-p9-aTf" userLabel="Profile" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jgw-DX-0C3"/>
                         <viewControllerLayoutGuide type="bottom" id="S23-rj-cjp"/>
@@ -37,16 +37,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="190-Zw-nr2" userLabel="Forum"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile" id="190-Zw-nr2" userLabel="Forum"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Zu-2f-I6x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="50" y="113"/>
         </scene>
-        <!--Newsfeed-->
+        <!--Forum-->
         <scene sceneID="KvI-RP-Uef">
             <objects>
-                <viewController id="VmA-Fk-wmk" userLabel="Newsfeed" sceneMemberID="viewController">
+                <viewController id="VmA-Fk-wmk" userLabel="Forum" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gK9-V1-Xn6"/>
                         <viewControllerLayoutGuide type="bottom" id="oSX-ia-5K9"/>
@@ -95,7 +95,7 @@
                             <constraint firstItem="zsR-wm-ecX" firstAttribute="top" secondItem="deD-oP-BCd" secondAttribute="bottom" constant="116" id="Wkk-GY-rue"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="1k2-vV-RZW" userLabel="Home"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="1k2-vV-RZW" userLabel="Home"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pgJ-wL-fkJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -122,4 +122,8 @@
             <point key="canvasLocation" x="-760" y="-1120"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="home" width="150" height="126"/>
+        <image name="profile" width="32" height="32"/>
+    </resources>
 </document>
