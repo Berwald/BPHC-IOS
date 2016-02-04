@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Newsfeed" id="03m-EB-HU0" userLabel="Profile"/>
+                    <tabBarItem key="tabBarItem" title="Newsfeed" id="03m-EB-HU0" userLabel="Newsfeed"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fKi-jd-8qn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -27,7 +27,7 @@
         <!--Profile-->
         <scene sceneID="Rgl-Rf-lcJ">
             <objects>
-                <viewController id="KPi-p9-aTf" userLabel="Profile" sceneMemberID="viewController">
+                <viewController id="KPi-p9-aTf" userLabel="Profile" customClass="ProfileViewController" customModule="BPHC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jgw-DX-0C3"/>
                         <viewControllerLayoutGuide type="bottom" id="S23-rj-cjp"/>
@@ -35,13 +35,86 @@
                     <view key="view" contentMode="scaleToFill" id="xZB-fC-fwc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Not Logged In" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTg-ul-ojh">
+                                <rect key="frame" x="180" y="236" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="0NJ-cx-b39"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vTg-ul-ojh" firstAttribute="top" secondItem="jgw-DX-0C3" secondAttribute="bottom" constant="172" id="T0q-8O-Qkt"/>
+                            <constraint firstItem="vTg-ul-ojh" firstAttribute="centerY" secondItem="xZB-fC-fwc" secondAttribute="centerY" id="fia-lY-lLs"/>
+                            <constraint firstItem="vTg-ul-ojh" firstAttribute="centerX" secondItem="xZB-fC-fwc" secondAttribute="centerX" id="lkd-VY-TjL"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="profile" id="190-Zw-nr2" userLabel="Forum"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="3eZ-7X-MhZ"/>
+                    <navigationItem key="navigationItem" id="gra-mR-KYS">
+                        <barButtonItem key="rightBarButtonItem" title="Log In" id="GOo-o9-1jZ">
+                            <connections>
+                                <segue destination="bLZ-3e-ZSA" kind="presentation" identifier="LogIn" modalPresentationStyle="formSheet" id="TUV-vI-H8A"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="usernameText" destination="vTg-ul-ojh" id="dXm-jf-Dce"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Zu-2f-I6x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="50" y="113"/>
+            <point key="canvasLocation" x="862" y="113"/>
+        </scene>
+        <!--Log In-->
+        <scene sceneID="Bc5-ZG-oeR">
+            <objects>
+                <viewController id="9eg-xs-2La" customClass="ProfileLoginViewController" customModule="BPHC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i3I-Ad-mxI"/>
+                        <viewControllerLayoutGuide type="bottom" id="qXT-wx-B1e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EVs-KA-3SB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5tJ-DD-GjP">
+                                <rect key="frame" x="20" y="136" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nij-DV-pc8">
+                                <rect key="frame" x="20" y="188" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Log In" id="qYa-5R-rdd">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Dq5-8e-b9Y"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="xHA-wc-B3f">
+                            <connections>
+                                <segue destination="7dt-ii-6OX" kind="unwind" unwindAction="unwindToProfile:" id="5zE-zy-6oR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="passwordText" destination="nij-DV-pc8" id="EId-Pc-tFV"/>
+                        <outlet property="saveButton" destination="xHA-wc-B3f" id="aIO-mH-1dN"/>
+                        <outlet property="usernameText" destination="5tJ-DD-GjP" id="ufY-Fw-E7S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JHR-U4-6RM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="7dt-ii-6OX" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2594" y="113"/>
         </scene>
         <!--Forum-->
         <scene sceneID="KvI-RP-Uef">
@@ -56,7 +129,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Forum" id="ioY-yt-8lo" userLabel="Newsfeed"/>
+                    <tabBarItem key="tabBarItem" title="Forum" id="ioY-yt-8lo" userLabel="Forum"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YFw-yc-pz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -114,12 +187,49 @@
                         <segue destination="Bqe-kT-hgU" kind="relationship" relationship="viewControllers" id="b9r-aW-7sw"/>
                         <segue destination="WhH-a0-T3d" kind="relationship" relationship="viewControllers" id="wjv-yU-QOs"/>
                         <segue destination="VmA-Fk-wmk" kind="relationship" relationship="viewControllers" id="m18-TU-z6X"/>
-                        <segue destination="KPi-p9-aTf" kind="relationship" relationship="viewControllers" id="QHB-hU-PA6"/>
+                        <segue destination="n1j-Tv-q7j" kind="relationship" relationship="viewControllers" id="QHB-hU-PA6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GIy-0D-Ddh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-760" y="-1120"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="f6f-2s-WjS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n1j-Tv-q7j" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile" id="190-Zw-nr2" userLabel="Profile"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lJh-lT-qys">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KPi-p9-aTf" kind="relationship" relationship="rootViewController" id="o5W-AA-Sid"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Da-43-5F5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="50" y="113"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dED-5z-hOv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bLZ-3e-ZSA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YCM-xs-n9O">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9eg-xs-2La" kind="relationship" relationship="rootViewController" id="OTx-sX-3lE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AmD-mj-LmJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1782" y="113"/>
         </scene>
     </scenes>
     <resources>
