@@ -35,23 +35,33 @@ class ProfileLoginViewController: UIViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if saveButton === sender {
-            //If username/password are null, make them ""
-            let username = usernameText.text ?? ""
-            let password = passwordText.text ?? ""
-            if verifyCredentials(username, password: password){
-                print("BPHC certified! Username: \(username) Password: \(password)")
-                user = User(username: username)
-            }else{
-                print("User not certified!")
-            }
-        }
+        
     }
     
     func verifyCredentials(username: String, password: String) -> Bool{
         //TODO: Real implementation of this. Need this information from BPHC
         return username == password
     }
+    
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool{
+        if identifier == "login"{
+            if saveButton === sender {
+                //If username/password are null, make them ""
+                let username = usernameText.text ?? ""
+                let password = passwordText.text ?? ""
+                if verifyCredentials(username, password: password){
+                    print("BPHC certified! Username: \(username) Password: \(password)")
+                    user = User(username: username)
+                }else{
+                    print("User not certified!")
+                    return false
+                }
+            }
+        }
+        return true;
+    }
+    
     
 
 }

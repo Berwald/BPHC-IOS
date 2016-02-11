@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2iH-gh-tZo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2iH-gh-tZo">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--Newsfeed-->
@@ -98,10 +98,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Log In" id="qYa-5R-rdd">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Dq5-8e-b9Y"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Dq5-8e-b9Y">
+                            <connections>
+                                <segue destination="7dt-ii-6OX" kind="unwind" identifier="cancel" unwindAction="unindToProfileCANCEL:" id="OkL-pV-CVx"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="xHA-wc-B3f">
                             <connections>
-                                <segue destination="7dt-ii-6OX" kind="unwind" unwindAction="unwindToProfile:" id="5zE-zy-6oR"/>
+                                <segue destination="7dt-ii-6OX" kind="unwind" identifier="login" unwindAction="unwindToProfile:" id="5zE-zy-6oR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -117,23 +121,49 @@
             <point key="canvasLocation" x="2594" y="113"/>
         </scene>
         <!--Forum-->
-        <scene sceneID="KvI-RP-Uef">
+        <scene sceneID="n9a-0r-QDR">
             <objects>
-                <viewController id="VmA-Fk-wmk" userLabel="Forum" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gK9-V1-Xn6"/>
-                        <viewControllerLayoutGuide type="bottom" id="oSX-ia-5K9"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="e2T-fF-LGI">
+                <tableViewController id="HfZ-ct-SPq" userLabel="Forum" customClass="QuestionTableViewController" customModule="BPHC" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="cKC-BY-hI2" userLabel="Forum">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Forum" id="ioY-yt-8lo" userLabel="Forum"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YFw-yc-pz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="question" rowHeight="90" id="gwO-G7-sUN" customClass="QuestionTableViewCell" customModule="BPHC" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gwO-G7-sUN" id="t06-iB-LH6">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="No5-DY-OTt">
+                                            <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                        </imageView>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3dH-0P-Uoh">
+                                            <rect key="frame" x="98" y="8" width="494" height="73"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitati</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="iconImage" destination="No5-DY-OTt" id="JPT-zA-xgk"/>
+                                    <outlet property="questionText" destination="3dH-0P-Uoh" id="o4r-uM-UIz"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="HfZ-ct-SPq" id="MTQ-kq-68k"/>
+                            <outlet property="delegate" destination="HfZ-ct-SPq" id="pEj-gY-Wel"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Forum" id="2Ia-Qe-EqD"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sDh-1N-qcT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="50" y="-610"/>
+            <point key="canvasLocation" x="906" y="-558"/>
         </scene>
         <!--Home-->
         <scene sceneID="3eX-ss-r4N">
@@ -186,7 +216,7 @@
                     <connections>
                         <segue destination="Bqe-kT-hgU" kind="relationship" relationship="viewControllers" id="b9r-aW-7sw"/>
                         <segue destination="WhH-a0-T3d" kind="relationship" relationship="viewControllers" id="wjv-yU-QOs"/>
-                        <segue destination="VmA-Fk-wmk" kind="relationship" relationship="viewControllers" id="m18-TU-z6X"/>
+                        <segue destination="CHe-eZ-y1j" kind="relationship" relationship="viewControllers" id="m18-TU-z6X"/>
                         <segue destination="n1j-Tv-q7j" kind="relationship" relationship="viewControllers" id="QHB-hU-PA6"/>
                     </connections>
                 </tabBarController>
@@ -230,6 +260,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AmD-mj-LmJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1782" y="113"/>
+        </scene>
+        <!--Forum-->
+        <scene sceneID="huf-zT-7hd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CHe-eZ-y1j" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Forum" id="ioY-yt-8lo" userLabel="Forum"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UoS-C2-kGd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HfZ-ct-SPq" kind="relationship" relationship="rootViewController" id="YXK-gt-XWl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gma-gB-ftU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="198" y="-558"/>
         </scene>
     </scenes>
     <resources>

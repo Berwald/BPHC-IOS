@@ -37,7 +37,7 @@ class ProfileViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    
+
     @IBAction func unwindToProfile(sender: UIStoryboardSegue) {
 //        print("unwinded to profile")
 //        let sourceVC = sender.sourceViewController as! ProfileLoginViewController
@@ -49,5 +49,11 @@ class ProfileViewController: UIViewController {
             
         }
     }
+    
+    @IBAction func unindToProfileCANCEL(sender: UIStoryboardSegue){
+        
+    }
+    
+    
 
 }
