@@ -24,7 +24,7 @@ class Question{
 }
 
 enum Type: String{
-    case STD = "STD"
+    case STD = "questionmark"
     case DrugsAlcohol = "1"
     case Pregnancy = "profile"
     case Mental = "3"
