@@ -13,6 +13,7 @@ class ProfileViewController: UIViewController {
     //MARK: Properties
     var user: User?
     @IBOutlet weak var usernameText: UITextView!
+    @IBOutlet weak var loginButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +47,7 @@ class ProfileViewController: UIViewController {
         if let sourceViewController = sender.sourceViewController as? ProfileLoginViewController, user = sourceViewController.user{
             print("setting username text")
             usernameText.text = user.username
+            loginButton.enabled = false
             
         }
     }
