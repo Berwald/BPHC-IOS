@@ -14,6 +14,7 @@ class ProfileLoginViewController: UIViewController {
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var usernameText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
+    @IBOutlet weak var incorrectPassTest: UITextView!
     var user: User?
     
     override func viewDidLoad() {
@@ -55,6 +56,7 @@ class ProfileLoginViewController: UIViewController {
                     user = User(username: username)
                 }else{
                     print("User not certified!")
+                    incorrectPassTest.text = "Username or Password not recognized!"
                     return false
                 }
             }
