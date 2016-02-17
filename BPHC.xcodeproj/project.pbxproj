@@ -19,6 +19,7 @@
 		69140B7B1C63DB1A008C40B7 /* ProfileLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69140B7A1C63DB1A008C40B7 /* ProfileLoginViewController.swift */; };
 		6916E7551C63E9610086C146 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6916E7541C63E9610086C146 /* ProfileViewController.swift */; };
 		6916E7571C63EA2A0086C146 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6916E7561C63EA2A0086C146 /* User.swift */; };
+		694E91301C73F8A2005FBAE7 /* QuestionAskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694E912F1C73F8A2005FBAE7 /* QuestionAskViewController.swift */; };
 		696368BD1C6B0872009577A7 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696368BC1C6B0872009577A7 /* QuestionTableViewCell.swift */; };
 		696368BF1C6B0883009577A7 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696368BE1C6B0883009577A7 /* Question.swift */; };
 		696368C11C6B2192009577A7 /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696368C01C6B2192009577A7 /* QuestionTableViewController.swift */; };
@@ -60,6 +61,7 @@
 		69140B7A1C63DB1A008C40B7 /* ProfileLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileLoginViewController.swift; sourceTree = "<group>"; };
 		6916E7541C63E9610086C146 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		6916E7561C63EA2A0086C146 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		694E912F1C73F8A2005FBAE7 /* QuestionAskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionAskViewController.swift; sourceTree = "<group>"; };
 		696368BC1C6B0872009577A7 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		696368BE1C6B0883009577A7 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		696368C01C6B2192009577A7 /* QuestionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				696368BC1C6B0872009577A7 /* QuestionTableViewCell.swift */,
 				696368BE1C6B0883009577A7 /* Question.swift */,
 				696368C01C6B2192009577A7 /* QuestionTableViewController.swift */,
+				694E912F1C73F8A2005FBAE7 /* QuestionAskViewController.swift */,
 			);
 			name = Forum;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6916E7551C63E9610086C146 /* ProfileViewController.swift in Sources */,
+				694E91301C73F8A2005FBAE7 /* QuestionAskViewController.swift in Sources */,
 				696368BD1C6B0872009577A7 /* QuestionTableViewCell.swift in Sources */,
 				18A996611BFB8DCB007A154A /* RootViewController.swift in Sources */,
 				696368BF1C6B0883009577A7 /* Question.swift in Sources */,
