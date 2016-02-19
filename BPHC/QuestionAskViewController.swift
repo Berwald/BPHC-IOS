@@ -13,6 +13,7 @@ class QuestionAskViewController: UIViewController, UITextViewDelegate {
     //MARK: Properties
     let MAX_LENGTH = 50
     @IBOutlet weak var questionText: UITextView!
+    @IBOutlet weak var charCount: UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
