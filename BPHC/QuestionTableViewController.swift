@@ -107,7 +107,19 @@ class QuestionTableViewController: UITableViewController {
     }
     */
     @IBAction func unwindToQuestionList(sender: UIStoryboardSegue) {
+        let questionController = sender.sourceViewController as! QuestionAskViewController
+        let questionText = questionController.questionText.text
+        print(questionText)
+        
+        let question = Question(question: questionText, type: .STD, answer: " ")
+        
+        let newIndexPath = NSIndexPath(forRow: 0, inSection: 0)
+        questions.insert(question, atIndex: 0)
+        tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Top)
         
     }
-
+    
+    @IBAction func unwindToQuestionListCANCEL(sender: UIStoryboardSegue){
+        
+    }
 }

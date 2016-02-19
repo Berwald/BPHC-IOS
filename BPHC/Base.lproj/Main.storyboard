@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Newsfeed" id="03m-EB-HU0" userLabel="Newsfeed"/>
+                    <tabBarItem key="tabBarItem" title="Newsfeed" image="newsfeed" selectedImage="newsfeed" id="03m-EB-HU0" userLabel="Newsfeed"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fKi-jd-8qn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -310,7 +310,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="CiR-kM-8Fm"/>
                     <navigationItem key="navigationItem" title="Ask" id="0YM-uQ-dU0">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="I3c-EF-ySO"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="I3c-EF-ySO">
+                            <connections>
+                                <segue destination="0hi-og-PdR" kind="unwind" unwindAction="unwindToQuestionListCANCEL:" id="3aI-RJ-hvg"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Submit" id="rzS-Mo-ReF">
                             <connections>
                                 <segue destination="0hi-og-PdR" kind="unwind" unwindAction="unwindToQuestionList:" id="dxX-AO-UgQ"/>
@@ -350,7 +354,7 @@
         <scene sceneID="huf-zT-7hd">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CHe-eZ-y1j" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Forum" id="ioY-yt-8lo" userLabel="Forum"/>
+                    <tabBarItem key="tabBarItem" title="Forum" image="forum" selectedImage="forum" id="ioY-yt-8lo" userLabel="Forum"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UoS-C2-kGd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -385,7 +389,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="forum" width="28" height="28"/>
         <image name="home" width="150" height="126"/>
+        <image name="newsfeed" width="25" height="25"/>
         <image name="profile" width="32" height="32"/>
     </resources>
 </document>
