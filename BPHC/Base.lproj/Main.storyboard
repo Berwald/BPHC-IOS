@@ -310,7 +310,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="CiR-kM-8Fm"/>
                     <navigationItem key="navigationItem" title="Ask" id="0YM-uQ-dU0">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="I3c-EF-ySO"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="I3c-EF-ySO">
+                            <connections>
+                                <segue destination="0hi-og-PdR" kind="unwind" unwindAction="unwindToQuestionListCANCEL:" id="3aI-RJ-hvg"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Submit" id="rzS-Mo-ReF">
                             <connections>
                                 <segue destination="0hi-og-PdR" kind="unwind" unwindAction="unwindToQuestionList:" id="dxX-AO-UgQ"/>
