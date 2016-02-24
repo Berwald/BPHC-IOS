@@ -62,13 +62,13 @@ class QuestionTableViewController: UITableViewController {
     }
     
 
-    /*
+    
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
+    
 
     /*
     // Override to support editing the table view.
@@ -106,7 +106,13 @@ class QuestionTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+        
+        
+    }
+    
     @IBAction func unwindToQuestionList(sender: UIStoryboardSegue) {
+
         let questionController = sender.sourceViewController as! QuestionAskViewController
         let questionText = questionController.questionText.text
         print(questionText)
