@@ -72,7 +72,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Zu-2f-I6x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="862" y="157"/>
+            <point key="canvasLocation" x="862" y="433"/>
         </scene>
         <!--Log In-->
         <scene sceneID="Bc5-ZG-oeR">
@@ -144,7 +144,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JHR-U4-6RM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="7dt-ii-6OX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2478" y="157"/>
+            <point key="canvasLocation" x="2478" y="433"/>
         </scene>
         <!--Forum-->
         <scene sceneID="n9a-0r-QDR">
@@ -210,24 +210,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deD-oP-BCd">
-                                <rect key="frame" x="180" y="134" width="240" height="301"/>
+                                <rect key="frame" x="180" y="110" width="240" height="341"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                 </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="fOa-v4-GGS"/>
+                                    <constraint firstAttribute="width" constant="240" id="gJu-ch-UaH"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <string key="text">The mission of the Boston Public Health Commission is to protect, preserve, and promote the health and well-being of all Boston residents, particularly the most vulnerable.
+
+We achieve our mission by providing and supporting accessible high quality community-based health and social services, community engagement and advocacy, development of health promoting policies and regulations, disease and injury prevention, emergency services, health promotion, and health education services. </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="deD-oP-BCd" firstAttribute="top" secondItem="jsq-Df-ND3" secondAttribute="bottom" constant="114" id="CfM-Ac-TXT"/>
-                            <constraint firstItem="deD-oP-BCd" firstAttribute="centerX" secondItem="giZ-6f-MCq" secondAttribute="centerX" id="NuD-kG-d8h"/>
-                            <constraint firstItem="zsR-wm-ecX" firstAttribute="top" secondItem="deD-oP-BCd" secondAttribute="bottom" constant="116" id="Wkk-GY-rue"/>
+                            <constraint firstItem="deD-oP-BCd" firstAttribute="top" secondItem="jsq-Df-ND3" secondAttribute="bottom" constant="90" id="8Pb-AQ-ssk"/>
+                            <constraint firstItem="zsR-wm-ecX" firstAttribute="top" secondItem="deD-oP-BCd" secondAttribute="bottom" constant="100" id="TUq-OY-3ep"/>
+                            <constraint firstItem="deD-oP-BCd" firstAttribute="centerX" secondItem="giZ-6f-MCq" secondAttribute="centerX" id="WGa-80-rlU"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="home" id="1k2-vV-RZW" userLabel="Home"/>
@@ -254,7 +256,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GIy-0D-Ddh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-760" y="-1120"/>
+            <point key="canvasLocation" x="-1272" y="-1168"/>
         </scene>
         <!--Profile-->
         <scene sceneID="f6f-2s-WjS">
@@ -273,7 +275,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Da-43-5F5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="50" y="157"/>
+            <point key="canvasLocation" x="50" y="441"/>
         </scene>
         <!--Ask-->
         <scene sceneID="y56-6f-JbS">
@@ -348,7 +350,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AmD-mj-LmJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1678" y="157"/>
+            <point key="canvasLocation" x="1642" y="433"/>
         </scene>
         <!--Forum-->
         <scene sceneID="huf-zT-7hd">
