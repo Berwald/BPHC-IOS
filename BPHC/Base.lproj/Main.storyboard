@@ -6,25 +6,6 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Newsfeed-->
-        <scene sceneID="c7D-54-gAo">
-            <objects>
-                <viewController id="WhH-a0-T3d" userLabel="Newsfeed" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="u8s-uT-66Y"/>
-                        <viewControllerLayoutGuide type="bottom" id="V9y-NA-rLF"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Qcl-UU-5u5">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Newsfeed" image="newsfeed" selectedImage="newsfeed" id="03m-EB-HU0" userLabel="Newsfeed"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fKi-jd-8qn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="22" y="-1289"/>
-        </scene>
         <!--Profile-->
         <scene sceneID="Rgl-Rf-lcJ">
             <objects>
@@ -250,9 +231,9 @@ We achieve our mission by providing and supporting accessible high quality commu
                     </tabBar>
                     <connections>
                         <segue destination="Bqe-kT-hgU" kind="relationship" relationship="viewControllers" id="b9r-aW-7sw"/>
-                        <segue destination="WhH-a0-T3d" kind="relationship" relationship="viewControllers" id="wjv-yU-QOs"/>
                         <segue destination="CHe-eZ-y1j" kind="relationship" relationship="viewControllers" id="m18-TU-z6X"/>
                         <segue destination="n1j-Tv-q7j" kind="relationship" relationship="viewControllers" id="QHB-hU-PA6"/>
+                        <segue destination="bFg-xl-avL" kind="relationship" relationship="viewControllers" id="mag-3Z-QTA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GIy-0D-Ddh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -352,6 +333,35 @@ We achieve our mission by providing and supporting accessible high quality commu
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AmD-mj-LmJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1642" y="433"/>
+        </scene>
+        <!--Newsfeed-->
+        <scene sceneID="nIx-Aa-uGL">
+            <objects>
+                <tableViewController id="bFg-xl-avL" customClass="TwitterViewController" customModule="BPHC" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Gz1-7U-TGR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5Iy-4N-Mep">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Iy-4N-Mep" id="irN-fz-Vww">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bFg-xl-avL" id="8v5-Dl-TwL"/>
+                            <outlet property="delegate" destination="bFg-xl-avL" id="OwM-de-zrU"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Newsfeed" image="newsfeed" id="oCi-SJ-cPr" userLabel="Newsfeed"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uLc-tT-Jfe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-9" y="-1268"/>
         </scene>
         <!--Forum-->
         <scene sceneID="huf-zT-7hd">
