@@ -232,8 +232,8 @@ We achieve our mission by providing and supporting accessible high quality commu
                     <connections>
                         <segue destination="Bqe-kT-hgU" kind="relationship" relationship="viewControllers" id="b9r-aW-7sw"/>
                         <segue destination="CHe-eZ-y1j" kind="relationship" relationship="viewControllers" id="m18-TU-z6X"/>
-                        <segue destination="n1j-Tv-q7j" kind="relationship" relationship="viewControllers" id="QHB-hU-PA6"/>
-                        <segue destination="bFg-xl-avL" kind="relationship" relationship="viewControllers" id="mag-3Z-QTA"/>
+                        <segue destination="UQ5-P6-osC" kind="relationship" relationship="viewControllers" id="mag-3Z-QTA"/>
+                        <segue destination="n1j-Tv-q7j" kind="relationship" relationship="viewControllers" id="U0w-An-AKA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GIy-0D-Ddh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -334,7 +334,7 @@ We achieve our mission by providing and supporting accessible high quality commu
             </objects>
             <point key="canvasLocation" x="1642" y="433"/>
         </scene>
-        <!--Newsfeed-->
+        <!--Twitter View Controller-->
         <scene sceneID="nIx-Aa-uGL">
             <objects>
                 <tableViewController id="bFg-xl-avL" customClass="TwitterViewController" customModule="BPHC" customModuleProvider="target" sceneMemberID="viewController">
@@ -344,7 +344,7 @@ We achieve our mission by providing and supporting accessible high quality commu
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5Iy-4N-Mep">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Iy-4N-Mep" id="irN-fz-Vww">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -357,11 +357,11 @@ We achieve our mission by providing and supporting accessible high quality commu
                             <outlet property="delegate" destination="bFg-xl-avL" id="OwM-de-zrU"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Newsfeed" image="newsfeed" id="oCi-SJ-cPr" userLabel="Newsfeed"/>
+                    <navigationItem key="navigationItem" id="feF-ID-U0g"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLc-tT-Jfe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-9" y="-1268"/>
+            <point key="canvasLocation" x="862" y="-1294"/>
         </scene>
         <!--Forum-->
         <scene sceneID="huf-zT-7hd">
@@ -449,7 +449,7 @@ We achieve our mission by providing and supporting accessible high quality commu
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QVL-r9-d1E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2478" y="-903"/>
+            <point key="canvasLocation" x="3290" y="-903"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9H6-zF-yYc">
@@ -485,7 +485,26 @@ We achieve our mission by providing and supporting accessible high quality commu
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4xf-ic-dep" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1642" y="-903"/>
+            <point key="canvasLocation" x="2454" y="-903"/>
+        </scene>
+        <!--Newsfeed-->
+        <scene sceneID="KNc-uh-SV3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UQ5-P6-osC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Newsfeed" image="newsfeed" id="oCi-SJ-cPr" userLabel="Newsfeed"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JqH-3a-g9u">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bFg-xl-avL" kind="relationship" relationship="rootViewController" id="QpA-pI-ohm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KQs-TB-Q8j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="50" y="-1294"/>
         </scene>
     </scenes>
     <resources>
