@@ -23,10 +23,11 @@
 		696368BD1C6B0872009577A7 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696368BC1C6B0872009577A7 /* QuestionTableViewCell.swift */; };
 		696368BF1C6B0883009577A7 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696368BE1C6B0883009577A7 /* Question.swift */; };
 		696368C11C6B2192009577A7 /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696368C01C6B2192009577A7 /* QuestionTableViewController.swift */; };
-		B7B852191C7D3BE3007A3FAB /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B852151C7D3BE3007A3FAB /* Fabric.framework */; };
-		B7B8521A1C7D3BE3007A3FAB /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B852161C7D3BE3007A3FAB /* TwitterKit.framework */; };
-		B7B8521B1C7D3BE3007A3FAB /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B7B852171C7D3BE3007A3FAB /* TwitterKitResources.bundle */; };
-		B7B8521C1C7D3BE3007A3FAB /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B852181C7D3BE3007A3FAB /* TwitterCore.framework */; };
+		B7B8522C1C7E5B61007A3FAB /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B8522B1C7E5B61007A3FAB /* TwitterViewController.swift */; };
+		B7B852321C7EB3E0007A3FAB /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B8522E1C7EB3E0007A3FAB /* Fabric.framework */; };
+		B7B852331C7EB3E0007A3FAB /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B8522F1C7EB3E0007A3FAB /* TwitterKit.framework */; };
+		B7B852341C7EB3E0007A3FAB /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B7B852301C7EB3E0007A3FAB /* TwitterKitResources.bundle */; };
+		B7B852351C7EB3E0007A3FAB /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B852311C7EB3E0007A3FAB /* TwitterCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,10 +70,11 @@
 		696368BC1C6B0872009577A7 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		696368BE1C6B0883009577A7 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		696368C01C6B2192009577A7 /* QuestionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
-		B7B852151C7D3BE3007A3FAB /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
-		B7B852161C7D3BE3007A3FAB /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = SOURCE_ROOT; };
-		B7B852171C7D3BE3007A3FAB /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = SOURCE_ROOT; };
-		B7B852181C7D3BE3007A3FAB /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = SOURCE_ROOT; };
+		B7B8522B1C7E5B61007A3FAB /* TwitterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
+		B7B8522E1C7EB3E0007A3FAB /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		B7B8522F1C7EB3E0007A3FAB /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		B7B852301C7EB3E0007A3FAB /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
+		B7B852311C7EB3E0007A3FAB /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +82,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7B852191C7D3BE3007A3FAB /* Fabric.framework in Frameworks */,
-				B7B8521C1C7D3BE3007A3FAB /* TwitterCore.framework in Frameworks */,
-				B7B8521A1C7D3BE3007A3FAB /* TwitterKit.framework in Frameworks */,
+				B7B852321C7EB3E0007A3FAB /* Fabric.framework in Frameworks */,
+				B7B852351C7EB3E0007A3FAB /* TwitterCore.framework in Frameworks */,
+				B7B852331C7EB3E0007A3FAB /* TwitterKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +108,10 @@
 		18A996521BFB8DCA007A154A = {
 			isa = PBXGroup;
 			children = (
+				B7B8522E1C7EB3E0007A3FAB /* Fabric.framework */,
+				B7B8522F1C7EB3E0007A3FAB /* TwitterKit.framework */,
+				B7B852301C7EB3E0007A3FAB /* TwitterKitResources.bundle */,
+				B7B852311C7EB3E0007A3FAB /* TwitterCore.framework */,
 				18A9965D1BFB8DCB007A154A /* BPHC */,
 				18A996761BFB8DCB007A154A /* BPHCTests */,
 				18A996811BFB8DCB007A154A /* BPHCUITests */,
@@ -126,12 +132,9 @@
 		18A9965D1BFB8DCB007A154A /* BPHC */ = {
 			isa = PBXGroup;
 			children = (
-				B7B852151C7D3BE3007A3FAB /* Fabric.framework */,
-				B7B852161C7D3BE3007A3FAB /* TwitterKit.framework */,
-				B7B852171C7D3BE3007A3FAB /* TwitterKitResources.bundle */,
-				B7B852181C7D3BE3007A3FAB /* TwitterCore.framework */,
 				18A9965E1BFB8DCB007A154A /* AppDelegate.swift */,
 				696368C41C6B21EE009577A7 /* Old */,
+				B7B8522A1C7E5B3B007A3FAB /* Newsfeed */,
 				696368C21C6B21C6009577A7 /* Forum */,
 				18A996661BFB8DCB007A154A /* Main.storyboard */,
 				18A996691BFB8DCB007A154A /* Assets.xcassets */,
@@ -191,6 +194,14 @@
 			name = Old;
 			sourceTree = "<group>";
 		};
+		B7B8522A1C7E5B3B007A3FAB /* Newsfeed */ = {
+			isa = PBXGroup;
+			children = (
+				B7B8522B1C7E5B61007A3FAB /* TwitterViewController.swift */,
+			);
+			name = Newsfeed;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -201,7 +212,7 @@
 				18A996571BFB8DCB007A154A /* Sources */,
 				18A996581BFB8DCB007A154A /* Frameworks */,
 				18A996591BFB8DCB007A154A /* Resources */,
-				B7B852141C7D3B93007A3FAB /* ShellScript */,
+				B7B8522D1C7EB3C8007A3FAB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -296,7 +307,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7B8521B1C7D3BE3007A3FAB /* TwitterKitResources.bundle in Resources */,
+				B7B852341C7EB3E0007A3FAB /* TwitterKitResources.bundle in Resources */,
 				18A9966D1BFB8DCB007A154A /* LaunchScreen.storyboard in Resources */,
 				18A9966A1BFB8DCB007A154A /* Assets.xcassets in Resources */,
 				18A996681BFB8DCB007A154A /* Main.storyboard in Resources */,
@@ -320,7 +331,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B7B852141C7D3B93007A3FAB /* ShellScript */ = {
+		B7B8522D1C7EB3C8007A3FAB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -331,7 +342,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Fabric.framework/run 2ef68d7e953d589e3e5931c5a728dea17596f3b9 b8aed8a998b03bb1708b01e63aca9d33ac35abe70cce460ed501007f3504206b";
+			shellScript = "./Fabric.framework/run 2ef68d7e953d589e3e5931c5a728dea17596f3b9 b8aed8a998b03bb1708b01e63aca9d33ac35abe70cce460ed501007f3504206b\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -340,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7B8522C1C7E5B61007A3FAB /* TwitterViewController.swift in Sources */,
 				6916E7551C63E9610086C146 /* ProfileViewController.swift in Sources */,
 				694E91301C73F8A2005FBAE7 /* QuestionAskViewController.swift in Sources */,
 				696368BD1C6B0872009577A7 /* QuestionTableViewCell.swift in Sources */,
