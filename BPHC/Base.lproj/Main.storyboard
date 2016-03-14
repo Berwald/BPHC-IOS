@@ -158,7 +158,7 @@
                                 <connections>
                                     <outlet property="iconImage" destination="No5-DY-OTt" id="JPT-zA-xgk"/>
                                     <outlet property="questionText" destination="3dH-0P-Uoh" id="o4r-uM-UIz"/>
-                                    <segue destination="EJV-Se-BdY" kind="show" identifier="ShowQuestion" id="GSB-d1-1Z1"/>
+                                    <segue destination="cbX-Y2-GOc" kind="show" id="xJP-zn-sMA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -382,10 +382,10 @@ We achieve our mission by providing and supporting accessible high quality commu
             </objects>
             <point key="canvasLocation" x="50" y="-572"/>
         </scene>
-        <!--View Controller-->
+        <!--Select Question View Controller-->
         <scene sceneID="Vtr-36-HHw">
             <objects>
-                <viewController id="9gO-SI-FAe" sceneMemberID="viewController">
+                <viewController id="9gO-SI-FAe" customClass="SelectQuestionViewController" customModule="BPHC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4gk-gl-wys"/>
                         <viewControllerLayoutGuide type="bottom" id="hKa-wf-RF2"/>
@@ -446,10 +446,16 @@ We achieve our mission by providing and supporting accessible high quality commu
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fH4-nx-Wx3"/>
+                    <connections>
+                        <outlet property="AnswerLong" destination="MRY-us-owm" id="kt2-gv-eob"/>
+                        <outlet property="AnswerShort" destination="jx4-uk-bpB" id="1oK-vJ-Ly9"/>
+                        <outlet property="QuestionAskView" destination="aU5-WV-8AV" id="E4C-rm-PEd"/>
+                        <outlet property="QuestionView" destination="VPz-ve-i5T" id="dk6-7T-YHR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QVL-r9-d1E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3290" y="-903"/>
+            <point key="canvasLocation" x="2478" y="-915"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9H6-zF-yYc">
@@ -469,24 +475,6 @@ We achieve our mission by providing and supporting accessible high quality commu
             </objects>
             <point key="canvasLocation" x="1642" y="-240"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="EPo-pK-XVs">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EJV-Se-BdY" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0C0-dT-zoc">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="9gO-SI-FAe" kind="relationship" relationship="rootViewController" id="wRW-3b-b4S"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4xf-ic-dep" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2454" y="-903"/>
-        </scene>
         <!--Newsfeed-->
         <scene sceneID="KNc-uh-SV3">
             <objects>
@@ -505,6 +493,24 @@ We achieve our mission by providing and supporting accessible high quality commu
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KQs-TB-Q8j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="50" y="-1294"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="22u-Hc-oaC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cbX-Y2-GOc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cfd-ko-yV6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9gO-SI-FAe" kind="relationship" relationship="rootViewController" id="wi3-nt-PPM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jpR-VV-CDy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1642" y="-915"/>
         </scene>
     </scenes>
     <resources>
