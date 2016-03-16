@@ -19,7 +19,6 @@ class ProfileLoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Login View Loaded")
 
         // Do any additional setup after loading the view.
     }

@@ -136,29 +136,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="question" rowHeight="90" id="gwO-G7-sUN" customClass="QuestionTableViewCell" customModule="BPHC" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="question" rowHeight="90" id="gwO-G7-sUN" customClass="QuestionTableViewCell" customModule="BPHC" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gwO-G7-sUN" id="t06-iB-LH6">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3dH-0P-Uoh">
-                                            <rect key="frame" x="98" y="0.0" width="494" height="90"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitati</string>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        </textView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="No5-DY-OTt">
                                             <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                         </imageView>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3dH-0P-Uoh">
+                                            <rect key="frame" x="98" y="0.0" width="494" height="90"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="iconImage" destination="No5-DY-OTt" id="JPT-zA-xgk"/>
                                     <outlet property="questionText" destination="3dH-0P-Uoh" id="o4r-uM-UIz"/>
-                                    <segue destination="cbX-Y2-GOc" kind="show" id="xJP-zn-sMA"/>
+                                    <segue destination="cbX-Y2-GOc" kind="show" id="130-bp-XUf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -382,10 +381,10 @@ We achieve our mission by providing and supporting accessible high quality commu
             </objects>
             <point key="canvasLocation" x="50" y="-572"/>
         </scene>
-        <!--Select Question View Controller-->
+        <!--View Question-->
         <scene sceneID="Vtr-36-HHw">
             <objects>
-                <viewController id="9gO-SI-FAe" customClass="SelectQuestionViewController" customModule="BPHC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="View Question" id="9gO-SI-FAe" customClass="SelectQuestionViewController" customModule="BPHC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4gk-gl-wys"/>
                         <viewControllerLayoutGuide type="bottom" id="hKa-wf-RF2"/>
@@ -394,63 +393,25 @@ We achieve our mission by providing and supporting accessible high quality commu
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aU5-WV-8AV">
-                                <rect key="frame" x="20" y="130" width="560" height="153"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8v0-WC-3w1">
+                                <rect key="frame" x="20" y="287" width="560" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="153" id="zIU-cE-XcK"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Answer" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jx4-uk-bpB">
-                                <rect key="frame" x="20" y="291" width="240" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="TI5-M6-2Fx"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Question" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VPz-ve-i5T">
-                                <rect key="frame" x="20" y="72" width="240" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="6ol-9D-IZD"/>
-                                    <constraint firstAttribute="width" constant="240" id="Sw7-gw-RWe"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MRY-us-owm">
-                                <rect key="frame" x="20" y="349" width="560" height="159"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Testing" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="boz-Fj-deJ">
+                                <rect key="frame" x="20" y="103" width="560" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="VPz-ve-i5T" firstAttribute="leading" secondItem="yfu-s9-XCn" secondAttribute="leadingMargin" id="0Qg-OQ-tVS"/>
-                            <constraint firstItem="jx4-uk-bpB" firstAttribute="top" secondItem="aU5-WV-8AV" secondAttribute="bottom" constant="8" symbolic="YES" id="4MP-uu-KNW"/>
-                            <constraint firstItem="aU5-WV-8AV" firstAttribute="top" secondItem="VPz-ve-i5T" secondAttribute="bottom" constant="8" symbolic="YES" id="4TE-aG-M2q"/>
-                            <constraint firstItem="MRY-us-owm" firstAttribute="top" secondItem="jx4-uk-bpB" secondAttribute="bottom" constant="8" symbolic="YES" id="5HI-pr-kUF"/>
-                            <constraint firstItem="hKa-wf-RF2" firstAttribute="top" secondItem="MRY-us-owm" secondAttribute="bottom" constant="43" id="DoN-ot-yJr"/>
-                            <constraint firstItem="MRY-us-owm" firstAttribute="leading" secondItem="jx4-uk-bpB" secondAttribute="leading" id="IKj-XU-cca"/>
-                            <constraint firstItem="MRY-us-owm" firstAttribute="trailing" secondItem="yfu-s9-XCn" secondAttribute="trailingMargin" id="Kc2-5Q-rBa"/>
-                            <constraint firstItem="MRY-us-owm" firstAttribute="trailing" secondItem="aU5-WV-8AV" secondAttribute="trailing" id="UiO-UK-xs0"/>
-                            <constraint firstItem="aU5-WV-8AV" firstAttribute="leading" secondItem="jx4-uk-bpB" secondAttribute="leading" id="ZbR-im-vir"/>
-                            <constraint firstItem="VPz-ve-i5T" firstAttribute="top" secondItem="4gk-gl-wys" secondAttribute="bottom" constant="8" symbolic="YES" id="mUz-99-JyG"/>
-                            <constraint firstItem="aU5-WV-8AV" firstAttribute="leading" secondItem="VPz-ve-i5T" secondAttribute="leading" id="tGT-aM-9OE"/>
-                            <constraint firstItem="VPz-ve-i5T" firstAttribute="trailing" secondItem="jx4-uk-bpB" secondAttribute="trailing" id="tjz-SB-uqH"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="fH4-nx-Wx3"/>
+                    <navigationItem key="navigationItem" title="View Question" id="fH4-nx-Wx3"/>
                     <connections>
-                        <outlet property="AnswerLong" destination="MRY-us-owm" id="kt2-gv-eob"/>
-                        <outlet property="AnswerShort" destination="jx4-uk-bpB" id="1oK-vJ-Ly9"/>
-                        <outlet property="QuestionAskView" destination="aU5-WV-8AV" id="E4C-rm-PEd"/>
-                        <outlet property="QuestionView" destination="VPz-ve-i5T" id="dk6-7T-YHR"/>
+                        <outlet property="answer" destination="8v0-WC-3w1" id="2ma-O4-lgy"/>
+                        <outlet property="question" destination="boz-Fj-deJ" id="LmV-7U-KMH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QVL-r9-d1E" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -497,6 +458,7 @@ We achieve our mission by providing and supporting accessible high quality commu
         <!--Navigation Controller-->
         <scene sceneID="22u-Hc-oaC">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jpR-VV-CDy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cbX-Y2-GOc" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cfd-ko-yV6">
@@ -508,7 +470,6 @@ We achieve our mission by providing and supporting accessible high quality commu
                         <segue destination="9gO-SI-FAe" kind="relationship" relationship="rootViewController" id="wi3-nt-PPM"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jpR-VV-CDy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1642" y="-915"/>
         </scene>
