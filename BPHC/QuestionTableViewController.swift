@@ -106,7 +106,7 @@ class QuestionTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        let questionView = (segue.destinationViewController as! UINavigationController).viewControllers[0] as! SelectQuestionViewController
+        let questionView = segue.destinationViewController as! SelectQuestionViewController
         questionView.setQuestionText(questionText: selectedQuestion.question)
         questionView.setAnswerText(answerText: selectedQuestion.answer!)
         
