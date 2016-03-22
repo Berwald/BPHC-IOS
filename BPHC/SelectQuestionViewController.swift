@@ -14,10 +14,14 @@ class SelectQuestionViewController: UIViewController {
     
     @IBOutlet weak var question: UITextView!
     @IBOutlet weak var answer: UITextView!
+    var questionText = ""
+    var answerText = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        question.text = questionText
+        answer.text = answerText
         // Do any additional setup after loading the view.
         
     }
@@ -27,12 +31,12 @@ class SelectQuestionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func setQuestionText(questionText: String){
-        question.text = questionText
+    func setQuestionText(questionText q: String){
+        self.questionText = q
     }
     
-    func setAnswerText(answerText: String?){
-        answer.text = answerText
+    func setAnswerText(answerText a: String){
+        self.answerText = a
     }
     
 
