@@ -157,7 +157,7 @@
                                 <connections>
                                     <outlet property="iconImage" destination="No5-DY-OTt" id="JPT-zA-xgk"/>
                                     <outlet property="questionText" destination="3dH-0P-Uoh" id="o4r-uM-UIz"/>
-                                    <segue destination="9gO-SI-FAe" kind="show" id="ywh-6A-dRt"/>
+                                    <segue destination="9gO-SI-FAe" kind="show" identifier="ShowQuestion" id="ywh-6A-dRt"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -169,7 +169,7 @@
                     <navigationItem key="navigationItem" title="Forum" id="2Ia-Qe-EqD">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="aAX-fy-UM3" userLabel="AskQuestion">
                             <connections>
-                                <segue destination="Nl9-5o-sPS" kind="presentation" id="OuS-10-NIm"/>
+                                <segue destination="Nl9-5o-sPS" kind="presentation" identifier="ComposeQuestion" id="OuS-10-NIm"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

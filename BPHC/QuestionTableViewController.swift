@@ -12,7 +12,7 @@ class QuestionTableViewController: UITableViewController {
     
     //MARK: Properties
     var questions = [Question]()
-    var selectedQuestion: Question = Question(question: "Test", type: .STD, answer: "")
+    var selectedIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,15 +106,20 @@ class QuestionTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        let questionView = segue.destinationViewController as! SelectQuestionViewController
-        questionView.setQuestionText(questionText: selectedQuestion.question)
-        questionView.setAnswerText(answerText: selectedQuestion.answer!)
+        if segue.identifier == "ShowQuestion"{
+            let questionView = segue.destinationViewController as! SelectQuestionViewController
+            questionView.setQuestionText(questionText: questions[selectedIndex].question)
+            questionView.setAnswerText(answerText: questions[selectedIndex].answer!)
+        }
+        else if segue.identifier == "ComposeQuestion"{
+            
+        }
+        
         
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
-        selectedQuestion = questions[indexPath.row]
-        
+        selectedIndex = indexPath.row
     }
     
     @IBAction func unwindToQuestionList(sender: UIStoryboardSegue) {
