@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class QuestionTableViewController: UITableViewController {
     
@@ -14,8 +15,23 @@ class QuestionTableViewController: UITableViewController {
     var questions = [Question]()
     var selectedIndex = 0
     
+    
+    // Create a reference to a Firebase location
+    var ref = Firebase(url:"https://fiery-heat-2834.firebaseio.com")
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Write data to Firebase
+        ref.setValue("Test")
+        // Read data and react to changes
+        ref.observeEventType(.Value, withBlock: {
+            snapshot in
+            print("\(snapshot.key) -> \(snapshot.value)")
+        })
+        
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
