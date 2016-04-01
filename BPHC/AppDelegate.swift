@@ -9,6 +9,9 @@
 import UIKit
 import Fabric
 import TwitterKit
+import Firebase
+
+
 
 
 @UIApplicationMain
