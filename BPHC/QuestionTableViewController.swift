@@ -129,6 +129,12 @@ class QuestionTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
         selectedIndex = indexPath.row
+//        let question = questions[selectedIndex]
+//        let nextController = SelectQuestionViewController()
+//        nextController.setQuestionText(questionText:  question.question)
+//        nextController.setAnswerText(answerText:  question.answer)
+//        self.navigationController?.pushViewController(nextController, animated: true)
+        performSegueWithIdentifier("ShowQuestion", sender: self)
         print("Index Selected: \(indexPath.row)")
     }
     

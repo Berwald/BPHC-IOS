@@ -15,7 +15,7 @@ class SelectQuestionViewController: UIViewController {
     @IBOutlet weak var question: UITextView!
     @IBOutlet weak var answer: UITextView!
     var questionText = ""
-    var answerText = ""
+    var answerText: String? = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,7 @@ class SelectQuestionViewController: UIViewController {
         self.questionText = q
     }
     
-    func setAnswerText(answerText a: String){
+    func setAnswerText(answerText a: String?){
         self.answerText = a
     }
     
