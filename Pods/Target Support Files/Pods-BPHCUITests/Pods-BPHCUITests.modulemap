@@ -1,0 +1,6 @@
+framework module Pods_BPHCUITests {
+  umbrella header "Pods-BPHCUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
