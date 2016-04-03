@@ -12,7 +12,11 @@ class QuestionTableViewCell: UITableViewCell {
     
     //MARK: Properties
     @IBOutlet weak var iconImage: UIImageView!
+    
     @IBOutlet weak var questionText: UITextView!
+    
+
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

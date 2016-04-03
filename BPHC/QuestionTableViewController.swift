@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class QuestionTableViewController: UITableViewController {
     
@@ -14,8 +15,25 @@ class QuestionTableViewController: UITableViewController {
     var questions = [Question]()
     var selectedIndex = 0
     
+    
+    // Create a reference to a Firebase location
+    var ref = Firebase(url:"https://fiery-heat-2834.firebaseio.com")
+
+    
+
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
+        // Read data and react to changes
+        ref.observeEventType(.Value, withBlock: {
+            snapshot in
+            print("\(snapshot.key) -> \(snapshot.value)")
+        })
+        
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -30,6 +48,9 @@ class QuestionTableViewController: UITableViewController {
     func loadExampleQuestion(){
         questions += [Question(question: "Does this work?", type: .STD, answer: "Yes!")]
         questions += [Question(question: "Hey how are you", type: .Pregnancy, answer: " ")]
+        
+        
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -58,7 +79,21 @@ class QuestionTableViewController: UITableViewController {
         
         cell.iconImage.image = UIImage(named: question.type.rawValue)
         cell.questionText.text = question.question
+        
+        
+    
+        // Write questions to Firebase
+        //TODO: figure out how to write answers to Firebase
+        
+        let questionRef = ref.childByAppendingPath("questions")
+        let question1 = ["question": cell.questionText.text, "answer": ""]
+        let question1Ref = questionRef.childByAutoId()
+        question1Ref.setValue(question1)
+            
+
         // Configure the cell...
+
+    
         
         return cell
     }
