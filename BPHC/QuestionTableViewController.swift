@@ -27,12 +27,6 @@ class QuestionTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-        // Read data and react to changes
-        ref.observeEventType(.Value, withBlock: {
-            snapshot in
-            print("\(snapshot.key) -> \(snapshot.value)")
-        })
         
         
         // Uncomment the following line to preserve selection between presentations
@@ -82,13 +76,11 @@ class QuestionTableViewController: UITableViewController {
         
         
     
-        // Write questions to Firebase
-        //TODO: figure out how to write answers to Firebase
-        
-        let questionRef = ref.childByAppendingPath("questions")
-        let question1 = ["question": cell.questionText.text, "answer": ""]
-        let question1Ref = questionRef.childByAutoId()
-        question1Ref.setValue(question1)
+        // Retrieve new posts as they are added to your database
+        ref.observeEventType(.ChildAdded, withBlock: { snapshot in
+            print(snapshot.value.objectForKey("questions"))
+            //print(snapshot.value.objectForKey("answer"))
+        })
             
 
         // Configure the cell...
@@ -168,6 +160,13 @@ class QuestionTableViewController: UITableViewController {
         questions.insert(question, atIndex: 0)
         tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Top)
         
+        // Write questions to Firebase
+        //TODO: figure out how to write answers to Firebase
+        
+        let questionRef = ref.childByAppendingPath("questions")
+        let question1 = ["question": questionController.questionText.text, "answer": ""]
+        let question1Ref = questionRef.childByAutoId()
+        question1Ref.setValue(question1)
     }
     
     @IBAction func unwindToQuestionListCANCEL(sender: UIStoryboardSegue){
