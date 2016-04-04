@@ -23,23 +23,29 @@ class QuestionTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         // Retrieve new posts as they are added to your database
-        ref.observeEventType(.ChildAdded, withBlock: { snapshot in
-            let question = Question(question: snapshot.value.objectForKey("question") as! String, type:.STD, answer: "")
-            self.questions.insert(question, atIndex: 0)
-            self.tableView.reloadData()
-        })
+        loadQuestions()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        loadExampleQuestion()
     }
     
-    func loadExampleQuestion(){
+    func loadQuestions(){
+        ref.observeEventType(.ChildAdded, withBlock: { snapshot in
+            let question = Question(question: snapshot.value.objectForKey("question") as! String,  answer: snapshot.value.objectForKey("answer") as? String)
+            
+            self.questions.insert(question, atIndex: 0)
+            self.reloadTable()
+        })
+        
+    }
     
+    func reloadTable(){
+        self.tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -64,7 +70,7 @@ class QuestionTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("question", forIndexPath: indexPath) as! QuestionTableViewCell
         let question = questions[indexPath.row]
         
-        cell.iconImage.image = UIImage(named: question.type.rawValue)
+        cell.iconImage.image = UIImage(named: question.answer != nil && question.answer != "" ? "answered":"unanswered")
         cell.questionText.text = question.question
         
         // Configure the cell...
@@ -129,11 +135,6 @@ class QuestionTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
         selectedIndex = indexPath.row
-//        let question = questions[selectedIndex]
-//        let nextController = SelectQuestionViewController()
-//        nextController.setQuestionText(questionText:  question.question)
-//        nextController.setAnswerText(answerText:  question.answer)
-//        self.navigationController?.pushViewController(nextController, animated: true)
         performSegueWithIdentifier("ShowQuestion", sender: self)
         print("Index Selected: \(indexPath.row)")
     }
@@ -161,4 +162,10 @@ class QuestionTableViewController: UITableViewController {
     @IBAction func unwindToQuestionListCANCEL(sender: UIStoryboardSegue){
         
     }
+    
+    @IBAction func onRefreshClick(sender: UIBarButtonItem) {
+        questions = []
+        loadQuestions()
+    }
+    
 }

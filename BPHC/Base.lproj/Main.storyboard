@@ -166,6 +166,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Forum" id="2Ia-Qe-EqD">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="TT8-l1-9UA">
+                            <connections>
+                                <action selector="onRefreshClick:" destination="HfZ-ct-SPq" id="NTe-MF-Aj1"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="aAX-fy-UM3" userLabel="AskQuestion">
                             <connections>
                                 <segue destination="Nl9-5o-sPS" kind="presentation" identifier="ComposeQuestion" id="OuS-10-NIm"/>
