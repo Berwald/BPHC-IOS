@@ -32,7 +32,6 @@ class QuestionAskViewController: UIViewController, UITextViewDelegate {
 
     func textViewDidChange(textView: UITextView) {
         let count = textView.text.characters.count
-        print(count)
         let text = textView.text
         
         if(count > MAX_LENGTH){

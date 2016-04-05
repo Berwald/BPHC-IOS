@@ -157,7 +157,6 @@
                                 <connections>
                                     <outlet property="iconImage" destination="No5-DY-OTt" id="JPT-zA-xgk"/>
                                     <outlet property="questionText" destination="3dH-0P-Uoh" id="o4r-uM-UIz"/>
-                                    <segue destination="9gO-SI-FAe" kind="show" identifier="ShowQuestion" id="ywh-6A-dRt"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -167,12 +166,20 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Forum" id="2Ia-Qe-EqD">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="TT8-l1-9UA">
+                            <connections>
+                                <action selector="onRefreshClick:" destination="HfZ-ct-SPq" id="NTe-MF-Aj1"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="aAX-fy-UM3" userLabel="AskQuestion">
                             <connections>
                                 <segue destination="Nl9-5o-sPS" kind="presentation" identifier="ComposeQuestion" id="OuS-10-NIm"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="9gO-SI-FAe" kind="show" identifier="ShowQuestion" id="CaG-C5-28t"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sDh-1N-qcT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -418,7 +425,7 @@ We achieve our mission by providing and supporting accessible high quality commu
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QVL-r9-d1E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2478" y="-915"/>
+            <point key="canvasLocation" x="1642" y="-947"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9H6-zF-yYc">

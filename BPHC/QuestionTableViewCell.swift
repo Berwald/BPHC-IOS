@@ -15,8 +15,6 @@ class QuestionTableViewCell: UITableViewCell {
     
     @IBOutlet weak var questionText: UITextView!
     
-
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()

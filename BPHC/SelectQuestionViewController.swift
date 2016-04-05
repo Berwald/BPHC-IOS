@@ -15,7 +15,7 @@ class SelectQuestionViewController: UIViewController {
     @IBOutlet weak var question: UITextView!
     @IBOutlet weak var answer: UITextView!
     var questionText = ""
-    var answerText = ""
+    var answerText: String? = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,12 +35,12 @@ class SelectQuestionViewController: UIViewController {
         self.questionText = q
     }
     
-    func setAnswerText(answerText a: String){
+    func setAnswerText(answerText a: String?){
         self.answerText = a
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -48,6 +48,6 @@ class SelectQuestionViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }
