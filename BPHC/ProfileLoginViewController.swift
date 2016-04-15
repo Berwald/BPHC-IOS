@@ -52,7 +52,7 @@ class ProfileLoginViewController: UIViewController {
                 let password = passwordText.text ?? ""
                 if verifyCredentials(username, password: password){
                     print("BPHC certified! Username: \(username) Password: \(password)")
-                    user = User(username: username)
+                    UserManager.user = User(username: username)
                 }else{
                     print("User not certified!")
                     incorrectPassTest.text = "Username or Password not recognized!"
