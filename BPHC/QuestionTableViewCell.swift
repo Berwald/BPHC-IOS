@@ -12,7 +12,8 @@ class QuestionTableViewCell: UITableViewCell {
     
     //MARK: Properties
     @IBOutlet weak var iconImage: UIImageView!
-    
+    @IBOutlet weak var numAnswers: UITextView!
+    @IBOutlet weak var timeAsked: UITextView!
     @IBOutlet weak var questionText: UITextView!
     
     
@@ -24,6 +25,10 @@ class QuestionTableViewCell: UITableViewCell {
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
+    }
+    
+    func setNumberOfAnswers(number: Int){
+        self.numAnswers.text = "\(number) answers"
     }
 
 }

@@ -10,13 +10,23 @@ import UIKit
 
 class Question{
     
+    var header: String
     var question: String
-    var answer: String?
+    var formattedTime: String
+    var answers = [Answer]()
     
-    init(question: String, answer: String?){
+    init(header: String, question: String, formattedTime: String, answers: [Answer]){
+        self.header = header
         self.question = question
-        self.answer = answer
+        self.formattedTime = formattedTime
+        self.answers = answers
     }
+    
+    func addAnswer(answer: Answer){
+        answers += [answer]
+    }
+    
+    
     
     
 }
