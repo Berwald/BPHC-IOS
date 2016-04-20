@@ -21,6 +21,7 @@ class QuestionTableViewController: UITableViewController {
     
     
     var exQuestion = Question(header: "Question Header 1 Question Header 2 Question Header 3 Question Header 4 Question Header 5 Question Header 6 Question Header 7 Question Header 8 Question Header 9 Question Header 10 Question Header 11 Question Header 12 Question Header 13 Question Header 14", question: "Question text", formattedTime: "10 minutes ago idk", answers: [Answer(answer: "This is the answer", formattedTime: "5 minutes ago", verifiedUser: true)])
+     var exQuestion2 = Question(header: "Question Header 1 Question Header 2 Question Header 3 Question Header 4 Question Header 5 Question Header 6 Question Header 7 ", question: "Question text", formattedTime: "10 minutes ago idk", answers: [Answer(answer: "This is the answer", formattedTime: "5 minutes ago", verifiedUser: true)])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,13 +50,17 @@ class QuestionTableViewController: UITableViewController {
     
     func loadQuestions(){
         ref.observeEventType(.ChildAdded, withBlock: { snapshot in
-            let question = self.exQuestion
+            let diceRoll = Int(arc4random_uniform(2))
+            if(diceRoll == 0){
+                let question = self.exQuestion
+                self.questions.insert(question, atIndex: 0)
+            }else{
+                let question = self.exQuestion2
+                self.questions.insert(question, atIndex: 0)
+            }
             //Question(header: "Question Header", question: snapshot.value.objectForKey("question") as! String, formattedTime: "10 minutes ago idk", answers: [snapshot.value.objectForKey("answer") as? String])
             
-            self.questions.insert(question, atIndex: 0)
             self.reloadTable()
-            let cell = self.getAllCells()[0] as! QuestionTableViewCell
-            cell.questionText.setContentOffset(CGPointZero, animated: false)
             
         })
         
@@ -91,11 +96,15 @@ class QuestionTableViewController: UITableViewController {
         
         // Configure the cell...
         cell.iconImage.image = UIImage(named: question.answers.isEmpty ? "unanswered":"answered")
+       
         cell.questionText.text = question.header
+        cell.questionText.scrollEnabled = false
+        cell.questionText.sizeToFit()
+       
         cell.timeAsked.text = question.formattedTime
-        cell.setNumberOfAnswers(question.answers.count)
-        cell.questionText.setContentOffset(CGPointZero, animated: false)
         cell.timeAsked.textColor = UIColor.lightGrayColor()
+        
+        cell.setNumberOfAnswers(question.answers.count)
         cell.numAnswers.textColor = UIColor.lightGrayColor()
 
         
@@ -111,6 +120,12 @@ class QuestionTableViewController: UITableViewController {
         return false
     }
     
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
+    {
+        let question = questions[indexPath.row]
+        return CGFloat(Double(question.header.characters.count))
+    }
     
     /*
     // Override to support editing the table view.
