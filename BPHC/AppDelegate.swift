@@ -12,8 +12,6 @@ import TwitterKit
 import Firebase
 
 
-
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -24,8 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Fabric.with([Twitter.self])
         // Override point for customization after application launch.
         
-        //let sharedApplication = UIApplication.sharedApplication()
-        //sharedApplication.delegate?.window??.tintColor = UIColor(red: 87/255.0, green: 188/255.0, blue: 95.0/255.0, alpha: 1.0)
+        let sharedApplication = UIApplication.sharedApplication()
+        sharedApplication.delegate?.window??.tintColor = UIColor(red: 255.0/255.0, green: 140.0/255.0, blue: 0.0/255.0, alpha: 1.0)
         
         return true
     }
