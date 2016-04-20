@@ -12,9 +12,10 @@ class QuestionAskViewController: UIViewController, UITextViewDelegate {
     
     //MARK: Properties
     let MAX_LENGTH = 50
+    @IBOutlet weak var questionHeader: UITextView!
     @IBOutlet weak var questionText: UITextView!
     @IBOutlet weak var charCount: UITextView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,6 +39,7 @@ class QuestionAskViewController: UIViewController, UITextViewDelegate {
             let range = text.startIndex..<text.startIndex.advancedBy(MAX_LENGTH)
             textView.text = text.substringWithRange(range)
         }
+        
     }
     
 

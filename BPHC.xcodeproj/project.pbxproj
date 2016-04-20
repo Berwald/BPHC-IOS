@@ -17,6 +17,7 @@
 		18A996781BFB8DCB007A154A /* BPHCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A996771BFB8DCB007A154A /* BPHCTests.swift */; };
 		18A996831BFB8DCB007A154A /* BPHCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A996821BFB8DCB007A154A /* BPHCUITests.swift */; };
 		69140B7B1C63DB1A008C40B7 /* ProfileLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69140B7A1C63DB1A008C40B7 /* ProfileLoginViewController.swift */; };
+		6914FE5F1CC81AA5007E5149 /* AnswerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6914FE5E1CC81AA5007E5149 /* AnswerList.swift */; };
 		6916E7551C63E9610086C146 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6916E7541C63E9610086C146 /* ProfileViewController.swift */; };
 		6916E7571C63EA2A0086C146 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6916E7561C63EA2A0086C146 /* User.swift */; };
 		6919D1DB1CBF07DC0027A64D /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6919D1DA1CBF07DC0027A64D /* Answer.swift */; };
@@ -70,6 +71,7 @@
 		18A996821BFB8DCB007A154A /* BPHCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPHCUITests.swift; sourceTree = "<group>"; };
 		18A996841BFB8DCB007A154A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69140B7A1C63DB1A008C40B7 /* ProfileLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileLoginViewController.swift; sourceTree = "<group>"; };
+		6914FE5E1CC81AA5007E5149 /* AnswerList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerList.swift; sourceTree = "<group>"; };
 		6916E7541C63E9610086C146 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		6916E7561C63EA2A0086C146 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6919D1DA1CBF07DC0027A64D /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				696368C01C6B2192009577A7 /* QuestionTableViewController.swift */,
 				694E912F1C73F8A2005FBAE7 /* QuestionAskViewController.swift */,
 				695A6F241C9901C20077FBF9 /* SelectQuestionViewController.swift */,
+				6914FE5E1CC81AA5007E5149 /* AnswerList.swift */,
 			);
 			name = Forum;
 			sourceTree = "<group>";
@@ -527,6 +530,7 @@
 				18A996651BFB8DCB007A154A /* ModelController.swift in Sources */,
 				69140B7B1C63DB1A008C40B7 /* ProfileLoginViewController.swift in Sources */,
 				18A996631BFB8DCB007A154A /* DataViewController.swift in Sources */,
+				6914FE5F1CC81AA5007E5149 /* AnswerList.swift in Sources */,
 				696368C11C6B2192009577A7 /* QuestionTableViewController.swift in Sources */,
 				6919D1DB1CBF07DC0027A64D /* Answer.swift in Sources */,
 				18A9965F1BFB8DCB007A154A /* AppDelegate.swift in Sources */,

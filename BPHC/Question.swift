@@ -26,6 +26,10 @@ class Question{
         answers += [answer]
     }
     
+    func toMap() -> Dictionary<String, String>{
+        return ["header" : header, "question" : question, "formattedDate" : formattedTime]
+    }
+    
     
     
     
