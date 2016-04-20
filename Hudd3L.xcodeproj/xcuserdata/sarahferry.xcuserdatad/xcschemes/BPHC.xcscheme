@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "18A9965A1BFB8DCB007A154A"
-               BuildableName = "BPHC.app"
-               BlueprintName = "BPHC"
-               ReferencedContainer = "container:BPHC.xcodeproj">
+               BuildableName = "Hudd3L.app"
+               BlueprintName = "Hudd3L"
+               ReferencedContainer = "container:Hudd3L.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "18A996721BFB8DCB007A154A"
-               BuildableName = "BPHCTests.xctest"
-               BlueprintName = "BPHCTests"
-               ReferencedContainer = "container:BPHC.xcodeproj">
+               BuildableName = "Hudd3L.xctest"
+               BlueprintName = "Hudd3LTests"
+               ReferencedContainer = "container:Hudd3L.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "18A9967D1BFB8DCB007A154A"
-               BuildableName = "BPHCUITests.xctest"
-               BlueprintName = "BPHCUITests"
-               ReferencedContainer = "container:BPHC.xcodeproj">
+               BuildableName = "Hudd3L.xctest"
+               BlueprintName = "Hudd3LUITests"
+               ReferencedContainer = "container:Hudd3L.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "18A9965A1BFB8DCB007A154A"
-            BuildableName = "BPHC.app"
-            BlueprintName = "BPHC"
-            ReferencedContainer = "container:BPHC.xcodeproj">
+            BuildableName = "Hudd3L.app"
+            BlueprintName = "Hudd3L"
+            ReferencedContainer = "container:Hudd3L.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "18A9965A1BFB8DCB007A154A"
-            BuildableName = "BPHC.app"
-            BlueprintName = "BPHC"
-            ReferencedContainer = "container:BPHC.xcodeproj">
+            BuildableName = "Hudd3L.app"
+            BlueprintName = "Hudd3L"
+            ReferencedContainer = "container:Hudd3L.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "18A9965A1BFB8DCB007A154A"
-            BuildableName = "BPHC.app"
-            BlueprintName = "BPHC"
-            ReferencedContainer = "container:BPHC.xcodeproj">
+            BuildableName = "Hudd3L.app"
+            BlueprintName = "Hudd3L"
+            ReferencedContainer = "container:Hudd3L.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

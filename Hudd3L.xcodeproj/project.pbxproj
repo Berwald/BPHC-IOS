@@ -54,7 +54,7 @@
 
 /* Begin PBXFileReference section */
 		12ED071E428F68E5BA18BAD9 /* Pods-BPHCUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BPHCUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BPHCUITests/Pods-BPHCUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		18A9965B1BFB8DCB007A154A /* BPHC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BPHC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18A9965B1BFB8DCB007A154A /* Hudd3L.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hudd3L.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A9965E1BFB8DCB007A154A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18A996601BFB8DCB007A154A /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		18A996621BFB8DCB007A154A /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
@@ -63,10 +63,10 @@
 		18A996691BFB8DCB007A154A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18A9966C1BFB8DCB007A154A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18A9966E1BFB8DCB007A154A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		18A996731BFB8DCB007A154A /* BPHCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BPHCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18A996731BFB8DCB007A154A /* Hudd3L.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Hudd3L.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A996771BFB8DCB007A154A /* BPHCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPHCTests.swift; sourceTree = "<group>"; };
 		18A996791BFB8DCB007A154A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		18A9967E1BFB8DCB007A154A /* BPHCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BPHCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18A9967E1BFB8DCB007A154A /* Hudd3L.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Hudd3L.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A996821BFB8DCB007A154A /* BPHCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPHCUITests.swift; sourceTree = "<group>"; };
 		18A996841BFB8DCB007A154A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69140B7A1C63DB1A008C40B7 /* ProfileLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileLoginViewController.swift; sourceTree = "<group>"; };
@@ -152,9 +152,9 @@
 		18A9965C1BFB8DCB007A154A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				18A9965B1BFB8DCB007A154A /* BPHC.app */,
-				18A996731BFB8DCB007A154A /* BPHCTests.xctest */,
-				18A9967E1BFB8DCB007A154A /* BPHCUITests.xctest */,
+				18A9965B1BFB8DCB007A154A /* Hudd3L.app */,
+				18A996731BFB8DCB007A154A /* Hudd3L.xctest */,
+				18A9967E1BFB8DCB007A154A /* Hudd3L.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -240,9 +240,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		18A9965A1BFB8DCB007A154A /* BPHC */ = {
+		18A9965A1BFB8DCB007A154A /* Hudd3L */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 18A996871BFB8DCB007A154A /* Build configuration list for PBXNativeTarget "BPHC" */;
+			buildConfigurationList = 18A996871BFB8DCB007A154A /* Build configuration list for PBXNativeTarget "Hudd3L" */;
 			buildPhases = (
 				F325234DF312EEAF0C008D23 /* 📦 Check Pods Manifest.lock */,
 				18A996571BFB8DCB007A154A /* Sources */,
@@ -256,14 +256,14 @@
 			);
 			dependencies = (
 			);
-			name = BPHC;
+			name = Hudd3L;
 			productName = BPHC;
-			productReference = 18A9965B1BFB8DCB007A154A /* BPHC.app */;
+			productReference = 18A9965B1BFB8DCB007A154A /* Hudd3L.app */;
 			productType = "com.apple.product-type.application";
 		};
-		18A996721BFB8DCB007A154A /* BPHCTests */ = {
+		18A996721BFB8DCB007A154A /* Hudd3LTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 18A9968A1BFB8DCB007A154A /* Build configuration list for PBXNativeTarget "BPHCTests" */;
+			buildConfigurationList = 18A9968A1BFB8DCB007A154A /* Build configuration list for PBXNativeTarget "Hudd3LTests" */;
 			buildPhases = (
 				C44DFDE96B2EE71D30181D4F /* 📦 Check Pods Manifest.lock */,
 				18A9966F1BFB8DCB007A154A /* Sources */,
@@ -277,14 +277,14 @@
 			dependencies = (
 				18A996751BFB8DCB007A154A /* PBXTargetDependency */,
 			);
-			name = BPHCTests;
+			name = Hudd3LTests;
 			productName = BPHCTests;
-			productReference = 18A996731BFB8DCB007A154A /* BPHCTests.xctest */;
+			productReference = 18A996731BFB8DCB007A154A /* Hudd3L.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		18A9967D1BFB8DCB007A154A /* BPHCUITests */ = {
+		18A9967D1BFB8DCB007A154A /* Hudd3LUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 18A9968D1BFB8DCB007A154A /* Build configuration list for PBXNativeTarget "BPHCUITests" */;
+			buildConfigurationList = 18A9968D1BFB8DCB007A154A /* Build configuration list for PBXNativeTarget "Hudd3LUITests" */;
 			buildPhases = (
 				700FFE18BBE9C3DF69F4FB5D /* 📦 Check Pods Manifest.lock */,
 				18A9967A1BFB8DCB007A154A /* Sources */,
@@ -297,9 +297,9 @@
 			dependencies = (
 				18A996801BFB8DCB007A154A /* PBXTargetDependency */,
 			);
-			name = BPHCUITests;
+			name = Hudd3LUITests;
 			productName = BPHCUITests;
-			productReference = 18A9967E1BFB8DCB007A154A /* BPHCUITests.xctest */;
+			productReference = 18A9967E1BFB8DCB007A154A /* Hudd3L.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -325,7 +325,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 18A996561BFB8DCA007A154A /* Build configuration list for PBXProject "BPHC" */;
+			buildConfigurationList = 18A996561BFB8DCA007A154A /* Build configuration list for PBXProject "Hudd3L" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -338,9 +338,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				18A9965A1BFB8DCB007A154A /* BPHC */,
-				18A996721BFB8DCB007A154A /* BPHCTests */,
-				18A9967D1BFB8DCB007A154A /* BPHCUITests */,
+				18A9965A1BFB8DCB007A154A /* Hudd3L */,
+				18A996721BFB8DCB007A154A /* Hudd3LTests */,
+				18A9967D1BFB8DCB007A154A /* Hudd3LUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -555,12 +555,12 @@
 /* Begin PBXTargetDependency section */
 		18A996751BFB8DCB007A154A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 18A9965A1BFB8DCB007A154A /* BPHC */;
+			target = 18A9965A1BFB8DCB007A154A /* Hudd3L */;
 			targetProxy = 18A996741BFB8DCB007A154A /* PBXContainerItemProxy */;
 		};
 		18A996801BFB8DCB007A154A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 18A9965A1BFB8DCB007A154A /* BPHC */;
+			target = 18A9965A1BFB8DCB007A154A /* Hudd3L */;
 			targetProxy = 18A9967F1BFB8DCB007A154A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -678,7 +678,7 @@
 				INFOPLIST_FILE = BPHC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GAI.BPHC;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Hudd3L;
 			};
 			name = Debug;
 		};
@@ -694,7 +694,7 @@
 				INFOPLIST_FILE = BPHC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GAI.BPHC;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Hudd3L;
 			};
 			name = Release;
 		};
@@ -706,8 +706,8 @@
 				INFOPLIST_FILE = BPHCTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GAI.BPHCTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BPHC.app/BPHC";
+				PRODUCT_NAME = Hudd3L;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hudd3L.app/Hudd3L";
 			};
 			name = Debug;
 		};
@@ -719,8 +719,8 @@
 				INFOPLIST_FILE = BPHCTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GAI.BPHCTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BPHC.app/BPHC";
+				PRODUCT_NAME = Hudd3L;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hudd3L.app/Hudd3L";
 			};
 			name = Release;
 		};
@@ -731,7 +731,7 @@
 				INFOPLIST_FILE = BPHCUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GAI.BPHCUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Hudd3L;
 				TEST_TARGET_NAME = BPHC;
 				USES_XCTRUNNER = YES;
 			};
@@ -744,7 +744,7 @@
 				INFOPLIST_FILE = BPHCUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GAI.BPHCUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Hudd3L;
 				TEST_TARGET_NAME = BPHC;
 				USES_XCTRUNNER = YES;
 			};
@@ -753,7 +753,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		18A996561BFB8DCA007A154A /* Build configuration list for PBXProject "BPHC" */ = {
+		18A996561BFB8DCA007A154A /* Build configuration list for PBXProject "Hudd3L" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				18A996851BFB8DCB007A154A /* Debug */,
@@ -762,7 +762,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		18A996871BFB8DCB007A154A /* Build configuration list for PBXNativeTarget "BPHC" */ = {
+		18A996871BFB8DCB007A154A /* Build configuration list for PBXNativeTarget "Hudd3L" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				18A996881BFB8DCB007A154A /* Debug */,
@@ -771,7 +771,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		18A9968A1BFB8DCB007A154A /* Build configuration list for PBXNativeTarget "BPHCTests" */ = {
+		18A9968A1BFB8DCB007A154A /* Build configuration list for PBXNativeTarget "Hudd3LTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				18A9968B1BFB8DCB007A154A /* Debug */,
@@ -780,7 +780,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		18A9968D1BFB8DCB007A154A /* Build configuration list for PBXNativeTarget "BPHCUITests" */ = {
+		18A9968D1BFB8DCB007A154A /* Build configuration list for PBXNativeTarget "Hudd3LUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				18A9968E1BFB8DCB007A154A /* Debug */,
