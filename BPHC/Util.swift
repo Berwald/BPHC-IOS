@@ -10,12 +10,13 @@ import Foundation
 
 class Util{
     
-    static let DEBUG = true
+    static let DEBUG = false
     
     static func formattedTimeNow() -> String{
-        return "time now"//TODO
+        let timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
+        return timestamp
     }
-    
+
     
 }
 extension String
@@ -25,3 +26,5 @@ extension String
         return self.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
     }
 }
+
+

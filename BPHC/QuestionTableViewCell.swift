@@ -11,7 +11,6 @@ import UIKit
 class QuestionTableViewCell: UITableViewCell {
     
     //MARK: Properties
-    @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var numAnswers: UITextView!
     @IBOutlet weak var timeAsked: UITextView!
     @IBOutlet weak var questionText: UITextView!

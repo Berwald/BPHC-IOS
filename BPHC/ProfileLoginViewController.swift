@@ -40,7 +40,7 @@ class ProfileLoginViewController: UIViewController {
     
     func verifyCredentials(username: String, password: String) -> Bool{
         //TODO: Real implementation of this. Need this information from BPHC
-        return username == password
+        return username.lowercaseString == "hudd3l" && password == "ilovebahec"
     }
     
     

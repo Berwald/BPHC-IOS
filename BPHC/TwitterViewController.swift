@@ -16,7 +16,7 @@ class TwitterViewController: TWTRTimelineViewController {
     super.viewDidLoad()
     
     let client = TWTRAPIClient()
-    self.dataSource = TWTRUserTimelineDataSource(screenName: "HealthyBoston", APIClient: client)
+    self.dataSource = TWTRUserTimelineDataSource(screenName: "hudd3L", APIClient: client)
         
     }
 
