@@ -20,8 +20,8 @@ class QuestionTableViewController: UITableViewController {
     var ref = Firebase(url:"https://fiery-heat-2834.firebaseio.com")
     
     
-    var exQuestion = Question(header: "Question Header 1 Question Header 2 Question Header 3 Question Header 4 Question Header 5 Question Header 6 Question Header 7 Question Header 8 Question Header 9 Question Header 10 Question Header 11 Question Header 12 Question Header 13 Question Header 14", question: "Question text", formattedTime: "10 minutes ago idk", answers: [Answer(answer: "This is the answer", formattedTime: "5 minutes ago", verifiedUser: true)])
-     var exQuestion2 = Question(header: "Question Header 1 Question Header 2 Question Header 3 Question Header 4 Question Header 5 Question Header 6 Question Header 7 ", question: "Question text", formattedTime: "10 minutes ago idk", answers: [Answer(answer: "This is the answer", formattedTime: "5 minutes ago", verifiedUser: true)])
+    var exQuestion = Question(header: "Question Header 1 Question Header 2 Question Header 3 Question Header 4 Question Header 5 Question Header 6 Question Header 7 Question Header 8 Question Header 9 Question Header 10 Question Header 11 Question Header 12 Question Header 13 Question Header 14", question: "Question text", formattedTime: "10 minutes ago idk", answers: [Answer(answer: "This is the answer", formattedTime: "5 minutes ago", verifiedUser: true)], id: "123456789")
+    var exQuestion2 = Question(header: "Question Header 1 Question Header 2 Question Header 3 Question Header 4 Question Header 5 Question Header 6 Question Header 7 ", question: "Question text", formattedTime: "10 minutes ago idk", answers: [Answer(answer: "This is the answer", formattedTime: "5 minutes ago", verifiedUser: true)], id: "987654321")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,25 +50,46 @@ class QuestionTableViewController: UITableViewController {
     
     func loadQuestions(){
         ref.observeEventType(.ChildAdded, withBlock: { snapshot in
-            let diceRoll = Int(arc4random_uniform(2))
-            if(diceRoll == 0){
-                let question = self.exQuestion
-                self.questions.insert(question, atIndex: 0)
-            }else{
-                let question = self.exQuestion2
-                self.questions.insert(question, atIndex: 0)
-            }
-            //Question(header: "Question Header", question: snapshot.value.objectForKey("question") as! String, formattedTime: "10 minutes ago idk", answers: [snapshot.value.objectForKey("answer") as? String])
             
+            let header = snapshot.value.objectForKey("question")!.valueForKey("header")! as! String
+            let questionText = snapshot.value.objectForKey("question")!.valueForKey("question")! as! String
+            let formattedDate = snapshot.value.objectForKey("question")!.valueForKey("formattedDate")! as! String
+            let id = String(snapshot.ref).componentsSeparatedByString("/")
+            
+
+            let answerKeys = snapshot.value.objectForKey("answers")?.allKeys as? [String]
+            var answersArray = [Answer]()
+            if let keys = answerKeys{
+                for x in keys{
+                    let JSONAns = snapshot.value.objectForKey("answers")?.objectForKey(x)
+                    let ans = JSONAns?.valueForKey("answer") as! String
+                    let formattedTime = JSONAns?.valueForKey("formattedDate") as! String
+                    let answer = Answer(answer: ans, formattedTime: formattedTime, verifiedUser: true)
+                    answersArray += [answer]
+                    //print(x)
+                }
+            }
+            
+            
+            let question = Question(header: header, question: questionText, formattedTime: formattedDate, answers: answersArray, id: id[id.count-1])
+            
+            //  let header = snapshot.
+            //Question(header: "Question Header", question: snapshot.value.objectForKey("question") as! String, formattedTime: "10 minutes ago idk", answers: [snapshot.value.objectForKey("answer") as? String])
+            self.questions.insert(question, atIndex: 0)
             self.reloadTable()
             
         })
         
     }
     
+    func parseAnswers(answers: String) -> [Answer]{
+        return []
+        
+    }
+    
     func reloadTable(){
         self.tableView.reloadData()
-
+        
         
         
     }
@@ -95,18 +116,18 @@ class QuestionTableViewController: UITableViewController {
         let question = questions[indexPath.row]
         
         // Configure the cell...
-        cell.iconImage.image = UIImage(named: question.answers.isEmpty ? "unanswered":"answered")
-       
+       // cell.iconImage.image = UIImage(named: question.answers.isEmpty ? "unanswered":"answered")
+        
         cell.questionText.text = question.header
         cell.questionText.scrollEnabled = false
         cell.questionText.sizeToFit()
-       
+        
         cell.timeAsked.text = question.formattedTime
         cell.timeAsked.textColor = UIColor.lightGrayColor()
         
         cell.setNumberOfAnswers(question.answers.count)
         cell.numAnswers.textColor = UIColor.lightGrayColor()
-
+        
         
         
         return cell
@@ -124,35 +145,39 @@ class QuestionTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
     {
         let question = questions[indexPath.row]
-        return CGFloat(Double(question.header.characters.count))
+        return getHeightForChars(question.header.characters.count)
+    }
+    
+    func getHeightForChars(numChars: Int) -> CGFloat{
+        return 70 + CGFloat(Double(numChars) * 0.6)
     }
     
     /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-    if editingStyle == .Delete {
-    // Delete the row from the data source
-    tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-    } else if editingStyle == .Insert {
-    // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }
-    }
-    */
+     // Override to support editing the table view.
+     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+     if editingStyle == .Delete {
+     // Delete the row from the data source
+     tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+     } else if editingStyle == .Insert {
+     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+     }
+     }
+     */
     
     /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-    
-    }
-    */
+     // Override to support rearranging the table view.
+     override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
+     
+     }
+     */
     
     /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-    // Return false if you do not want the item to be re-orderable.
-    return true
-    }
-    */
+     // Override to support conditional rearranging of the table view.
+     override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+     // Return false if you do not want the item to be re-orderable.
+     return true
+     }
+     */
     
     
     // MARK: - Navigation
@@ -180,7 +205,7 @@ class QuestionTableViewController: UITableViewController {
     
     @IBAction func unwindToQuestionList(sender: UIStoryboardSegue) {
         
-        let questionController = sender.sourceViewController as! QuestionAskViewController
+        let qc = sender.sourceViewController as! QuestionAskViewController
         //        let questionText = questionController.questionText.text
         //
         //        let question = Question(question: questionText, type: .STD, answer: " ")
@@ -192,10 +217,10 @@ class QuestionTableViewController: UITableViewController {
         // Write questions to Firebase
         //TODO: figure out how to write answers to Firebase
         
-        //let questionRef = ref.childByAppendingPath("questions")
-        let question1 = ["question": questionController.questionText.text, "answer": ""]
-        let question1Ref = ref.childByAutoId()
-        question1Ref.setValue(question1)
+        let questionRef = ref.childByAutoId()
+        let question1 = ["question": ["question": qc.questionText.text, "header": qc.questionHeader.text, "formattedDate": Util.formattedTimeNow()]]
+        questionRef.setValue(question1)
+        
     }
     
     @IBAction func unwindToQuestionListCANCEL(sender: UIStoryboardSegue){

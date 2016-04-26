@@ -19,4 +19,9 @@ class Answer{
         self.formattedTime = formattedTime
         self.verifiedUser = verifiedUser
     }
+    
+    func toMap()-> Dictionary<String, String>{
+        return ["answer": answer, "formattedDate": formattedTime]
+        
+    }
 }

@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Firebase
 
-class SelectQuestionViewController: UIViewController, UITextViewDelegate, UITableViewDataSource{
+class SelectQuestionViewController: UIViewController, UITextViewDelegate, UITableViewDataSource, UITableViewDelegate{
     
     
     //MARK: Properties
@@ -18,28 +19,25 @@ class SelectQuestionViewController: UIViewController, UITextViewDelegate, UITabl
     @IBOutlet weak var answer: UITextView!
     @IBOutlet weak var answerTable: UITableView!
     
-    var questionObj: Question?
+    var questionObj: Question!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        question.text = questionObj!.question
-        self.title = questionObj!.header
+        question.text = questionObj.question
+        self.title = questionObj.header
         // Do any additional setup after loading the view.
         answer.delegate = self
         answerTable.dataSource = self
+        answerTable.delegate = self
         
-        if UserManager.isLoggedIn() || Util.DEBUG{
-            answer.userInteractionEnabled = true
-        }else{
-            answer.userInteractionEnabled = false
-        }
-        
+
         //self.answerTable.rowHeight = UITableViewAutomaticDimension;
         // self.answerTable.estimatedRowHeight = 10.0; // set to whatever your "average" cell height is
         
         
     }
+    
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -69,7 +67,12 @@ class SelectQuestionViewController: UIViewController, UITextViewDelegate, UITabl
     
     @IBAction func onSubmit(sender: UIButton) {
         if(isValidAnswer(self.answer.text)){
-            questionObj?.answers += [Answer(answer: answer.text, formattedTime: Util.formattedTimeNow(), verifiedUser: UserManager.isLoggedIn())]
+            let ref = Firebase(url:"https://fiery-heat-2834.firebaseio.com/\(questionObj!.id)/answers")
+            let answerObj = Answer(answer: answer.text, formattedTime: Util.formattedTimeNow(), verifiedUser: UserManager.isLoggedIn())
+            ref.childByAutoId().setValue(answerObj.toMap())
+            
+            questionObj.answers += [answerObj]
+            
             answerTable.reloadData()
         }
         self.answer.text = placeHolderText
@@ -89,18 +92,25 @@ class SelectQuestionViewController: UIViewController, UITextViewDelegate, UITabl
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return questionObj!.answers.count
+        return questionObj.answers.count
         
     }
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat{
+        let answer = questionObj.answers[indexPath.row]
+        return getHeightForChars(Int(answer.answer.characters.count))
+    }
     
+    func getHeightForChars(numChars: Int) -> CGFloat{
+        return 80 + CGFloat(Double(numChars) * 0.56)
+    }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("AnswerCell", forIndexPath: indexPath) as! AnswerTableViewCell
-        let answer = questionObj!.answers[indexPath.row]
+        let answer = questionObj.answers[indexPath.row]
         
         cell.answer.text = answer.answer
         cell.time.text = answer.formattedTime
-        cell.userImage.image = UIImage(named: answer.verifiedUser ? "verified" : "unanswered")
+        cell.userImage.image = UIImage(named: "hudd3lPenguin")
         
         cell.resize()
         /* cell.iconImage.image = UIImage(named: question.answers.isEmpty ? "unanswered":"answered")
@@ -139,6 +149,10 @@ class SelectQuestionViewController: UIViewController, UITextViewDelegate, UITabl
     
     override func viewWillAppear(animated: Bool) {
         
+        super.viewWillAppear(animated)
+        
+        answer.userInteractionEnabled = UserManager.isLoggedIn() || Util.DEBUG
+
         if(answer.text == "") {
             self.answer.text = placeHolderText
             self.answer.textColor = UIColor.lightGrayColor()

@@ -14,12 +14,14 @@ class Question{
     var question: String
     var formattedTime: String
     var answers = [Answer]()
+    var id: String
     
-    init(header: String, question: String, formattedTime: String, answers: [Answer]){
+    init(header: String, question: String, formattedTime: String, answers: [Answer], id: String){
         self.header = header
         self.question = question
         self.formattedTime = formattedTime
         self.answers = answers
+        self.id = id
     }
     
     func addAnswer(answer: Answer){

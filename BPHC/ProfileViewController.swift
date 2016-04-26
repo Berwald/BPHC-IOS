@@ -44,11 +44,12 @@ class ProfileViewController: UIViewController {
 //        let sourceVC = sender.sourceViewController as! ProfileLoginViewController
 //        user = sourceVC.user
 //        usernameText.text = user?.username
-        if let sourceViewController = sender.sourceViewController as? ProfileLoginViewController, user = sourceViewController.user{
-            print("setting username text")
-            usernameText.text = user.username
+        
+        
+        
+        if UserManager.isLoggedIn(){
             loginButton.enabled = false
-            
+            usernameText.text = "Logged in!"
         }
     }
     
